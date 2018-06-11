@@ -11,3 +11,6 @@
 .rspec_status
 .tokens.yml
 tokens.yml
+Gemfile.lock
+*.gem
+.bundle
