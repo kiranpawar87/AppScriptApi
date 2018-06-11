@@ -1,7 +1,6 @@
 require "app_script_api/version"
 require 'active_support/configurable'
 require 'yaml'
-require 'oauth2'
 
 module AppScriptApi
   class << self
