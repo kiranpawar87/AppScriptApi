@@ -2,7 +2,7 @@ module Utilities
   class HttpService
     attr_reader :authenticate
     include HTTParty
-    base_uri ""
+    base_uri ''
 
     def initialize
       @options = {}
@@ -18,7 +18,6 @@ module Utilities
 
     def merge_headers(headers)
       check_and_merge(headers)
-      puts @options.inspect
     end
 
     def check_and_merge(attribute)

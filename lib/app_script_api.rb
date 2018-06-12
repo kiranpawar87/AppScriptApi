@@ -1,4 +1,4 @@
-require "app_script_api/version"
+require 'app_script_api/version'
 require 'active_support/configurable'
 require 'yaml'
 
@@ -29,13 +29,15 @@ module AppScriptApi
 
   class AppScriptApi::Configuration
     include ActiveSupport::Configurable
-
-    config_accessor(:client_id) { "497538968616-f6f8lbgsgl43fecoq1bqipkbl4pjn4l3.apps.googleusercontent.com" }
-    config_accessor(:client_secret) { "CKXmLuzWWoyWm3w8u3pw2P_A" }
-    config_accessor(:script_id) { "1kdtmXPtQcJF8o95OftZSYH5-3HmdCNCXVf8wjPAyb1hTN-1LtlhNIpBr" }
-    config_accessor(:scopes) { "https://www.googleapis.com/auth/script.projects https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/script.container.ui https://www.googleapis.com/auth/script.external_request https://www.googleapis.com/auth/script.scriptapp https://www.googleapis.com/auth/spreadsheets" }
-    config_accessor(:redirect_uri) { "http://localhost:3000/auth" }
-    config_accessor(:function_name) { "copySheet" }
+    scopes = "https://www.googleapis.com/auth/script.projects https://www.googleapis.com/auth/drive" \
+    " https://www.googleapis.com/auth/script.container.ui https://www.googleapis.com/auth/script.external_request" \
+    " https://www.googleapis.com/auth/script.scriptapp https://www.googleapis.com/auth/spreadsheets"
+    config_accessor(:client_id) { '497538968616-f6f8lbgsgl43fecoq1bqipkbl4pjn4l3.apps.googleusercontent.com' }
+    config_accessor(:client_secret) { 'CKXmLuzWWoyWm3w8u3pw2P_A' }
+    config_accessor(:script_id) { '1kdtmXPtQcJF8o95OftZSYH5-3HmdCNCXVf8wjPAyb1hTN-1LtlhNIpBr' }
+    config_accessor(:scopes) { scopes }
+    config_accessor(:redirect_uri) { 'http://localhost:3000/auth' }
+    config_accessor(:function_name) { 'copySheet' }
     config_accessor(:dev_mode) { false }
   end
 end
